@@ -51,10 +51,10 @@ const toCSV = (input: any, options?: ObjCsvOptions): string => {
     csvString += values.join(workingOptions.delimiter) + EOL;
   }
 
-  return csvString;
+  return csvString.trim();
 };
 
-export const objcsv = {
+export const obj2csv = {
   toCSV,
 };
 
