@@ -1,4 +1,4 @@
-# csvline
+# modestcsv
 
 Minimalist objects to csv string composer -> one liner
 
@@ -8,13 +8,15 @@ In memory minimalist CSV parser. It maps all properties from the given object to
 
 ## Install
 
-`npm i csvline`
-`yarn add csvline`
+`npm i modestcsv`
+`yarn add modestcsv`
 
 ## Usage
 
+### toCSV
+
 ```typescript
-import csvline from "csvline";
+import csv from "modestcsv";
 
 const item = {
   a: "b",
@@ -24,22 +26,57 @@ const item = {
 const expectedResult = `a,c
 b,d`;
 
-const result = csvline(item);
+const result = csv.toCSV(item);
+
+expect(result).toEqual(expectedResult);
+```
+
+### fromCSV
+
+```typescript
+import csv from "modestcsv";
+
+const input = `a,c
+b,d`;
+
+const expectedResult = [
+  {
+    a: "b",
+    c: "d",
+  },
+];
+
+const result = csv.fromCSV(input);
 
 expect(result).toEqual(expectedResult);
 ```
 
 ## API
 
-`csvline` - CSV parser
+`modestcsv` - CSV parser
 
-**Signature**: `csvline(input[, options])`
+**Module exports**:
+
+```typescript
+const modestcsv: {
+  toCSV: (input: any, options?: ObjCsvOptions | undefined) => string;
+  fromCSV: (input: string, options?: ObjCsvOptions | undefined) => {};
+};
+```
+
+**Signature**: `toCSV(input[, options])`
 
 `@input`: JS `object` / `Array`.
 
 `@output`: `string`
 
-The method allow custom options:
+**Signature**: `fromCSV(input[, options])`
+
+`@input`: JS `string`.
+
+`@output`: `object`
+
+### The methods allow custom options:
 
 ```typescript
 type ObjCsvOptions = {

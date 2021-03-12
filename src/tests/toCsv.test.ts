@@ -1,4 +1,4 @@
-import csvline from "../";
+import csv from "../";
 
 describe("toCSV sample test", () => {
   test("toCSV on simple input", () => {
@@ -10,7 +10,7 @@ describe("toCSV sample test", () => {
     const expectedResult = `a,c
 b,d`;
 
-    const result = csvline(item);
+    const result = csv.toCSV(item);
 
     expect(result).toEqual(expectedResult);
   });
