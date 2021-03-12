@@ -54,7 +54,7 @@ const toCSV = (input: any, options?: ObjCsvOptions): string => {
   return csvString.trim();
 };
 
-export const obj2csv = {
+export const csvline = {
   toCSV,
 };
 

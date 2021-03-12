@@ -1,4 +1,4 @@
-import obj2csv from "../";
+import csvline from "../";
 
 describe("toCSV sample test", () => {
   test("toCSV on simple input", () => {
@@ -10,7 +10,7 @@ describe("toCSV sample test", () => {
     const expectedResult = `a,c
 b,d`;
 
-    const result = obj2csv(item);
+    const result = csvline(item);
 
     expect(result).toEqual(expectedResult);
   });
