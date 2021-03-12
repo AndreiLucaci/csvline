@@ -1,6 +1,6 @@
 {
   "name": "modestcsv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimalist objects to csv string composer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AndreiLucaci/modestcsv.git"
+    "url": "git+https://github.com/AndreiLucaci/node-modestcsv.git"
   },
   "keywords": [
     "csv",
@@ -31,9 +31,9 @@
   "author": "Andrei Lucaci",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AndreiLucaci/modestcsv/issues"
+    "url": "https://github.com/AndreiLucaci/node-modestcsv/issues"
   },
-  "homepage": "https://github.com/AndreiLucaci/modestcsv#readme",
+  "homepage": "https://github.com/AndreiLucaci/node-modestcsv#readme",
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "jest": "^26.6.3",
